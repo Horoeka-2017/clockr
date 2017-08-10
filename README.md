@@ -1,26 +1,6 @@
 # Redux without React
-
-This repo aims to help you experiment with Redux without distractions from the extra bits to wire up React. After cloning:
-
-```shell
-npm install
-npm start
-```
-
+npm Start: 
 This will start a Webpack dev server. Open [http://localhost:8080](http://localhost:8080) in your browser.
-
-## The Redux DevTool
-
-Install the Redux DevTool Chrome extension from [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).
-
-## Excercise
-
-### Using the Redux DevTool
-
-Load up the Redux DevTool and dispatch a few `ADD_WOMBAT` and `DEL_WOMBAT` actions to see what's going on. This screenshot illustrates how to dispatch actions using the dev tools.
-
-![Dispatching actions using Redux dev tools](./screenshot1.png)
-
 
 ### Write some code
 
