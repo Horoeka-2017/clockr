@@ -43,5 +43,7 @@
       "promise"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
