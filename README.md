@@ -1,48 +1,32 @@
-# Redux without React
-npm Start: 
-This will start a Webpack dev server. Open [http://localhost:8080](http://localhost:8080) in your browser.
+# React minimal
 
-### Write some code
+As part of an introduction to React, this repo attempts to show React in a most basic form.
 
-- In your `index.js` have a look at the `renderWombats` function.js. Notice how this function loops through and displays each of the wombats to the DOM?
-- Add an `UPDATE_WOMBAT` action to the reducer that includes the old and new value of the wombat and make sure you can dispatch the action successfully from the Redux DevTool.You'll dispatch this action from code in a later step.
-
-
-#### Delete a Wombat
-
-Add a delete button next to each of the wombats so they can be deleted:
-
-- Modify the `renderWombats` function to add a button against each of the wombats.
-- Assign the button an `id` with the wombat's name so you can find the button on the DOM later in order to add an event listener.
-- Add an event listener to handle a `click` event.
-- In the event listener, [`dispatch`](http://redux.js.org/docs/api/Store.html#dispatch) a `DEL_WOMBAT` action to the store to delete the wombat based on its name/id.
+* Many components can be simple functions.
+* Data to render in the component is passed in as props.
+* Assemble other components by importing them and calling them.
 
 
-#### Add a Wombat
+## Setup
 
-- Add a simple input field to the page with a button to add a wombat.
-- Add an event listener to handle the button's `click` event.
-- In the event listener, `dispatch` an `ADD_WOMBAT` action to the store to add the wombat's name from the input box.
+Clone this repo, and from the repo's folder
 
-
-#### Update a Wombat
-
-- Modify the `renderWombats` function to add an input box and a button next to each of the wombats.
-- Assign the input box an `id` with the wombat's name so the event listener can find it on the DOM when the button is clicked.
-- Bind an event listener that passes in the old wombat name.
-- Add the bound event listener to handle the button's `click` event.
-- In the event listener, get the wombat's new name by using the old name as an id on the input box.
-- Construct the action using the old and new names and its type: `UPDATE_WOMBAT`.
-- `dispatch` the action to the store to change the name of the wombat.
+```sh
+npm install
+npm start
+```
 
 
-#### Add a new type of animal
+## Next steps
 
-- Add a new reducer function for another property on the Redux store. We already have `wombats`; how about `aardvarks`?
-- Add some actions to the new reducer.
-- Add another rendering function in `index.js` to handle the new property on the store, and subscribe it to the store using the same method as `wombats`.
+* Add new mount points and render components into them.
+* Add new components and use them inside existing components.
+* Render complex data structures (objects in objects) as props.
+* Check out the `npm start` script and the `webpack.config.js` file.
+* Conditionally show child components using a ternary operator.
+* Create child components from an array of data using `.map()`.
 
 
-## See also
+## Wat?
 
-When you're starting to get happier with this process, you could try reinforcing it with the [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux) video tutorials from Redux creator Dan Abramov.
+* Why a simple Node server and not `webpack-dev-server`? Students seeing this repo for the first time are proficient with Node/Express. We've chosen to not throw out the concept of client/server even though we admittedly don't need a server here. We introduce `webpack-dev-server` later. Today we just want to focus on React concepts.

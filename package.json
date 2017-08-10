@@ -1,8 +1,8 @@
 {
-  "name": "clockr",
+  "name": "react-minimal",
   "version": "0.1.0",
-  "description": "Changing Time in a Binary Fashion",
-  "repository": "https://github.com/Horoeka-2017/clockr.git",
+  "description": "the essence of a react component",
+  "repository": "https://github.com/dev-academy-challenges/react-minimal.git",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server & webpack --watch"
