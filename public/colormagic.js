@@ -1,4 +1,4 @@
-export default const magic = {
+export default magic = {
     'box': {
         width: '50 %',
         height: '70 %'
