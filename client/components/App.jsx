@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
 
 import Binary from './Binary'
 
@@ -29,10 +28,8 @@ class App extends React.Component {
     return (
       <div >
         <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
-        <div>Binary: {Binary(this.state.secondsElapsed)} </div>
+        <div>Binary: <Binary time = {this.state.secondsElapsed}/> </div>
         <div className='color-container'>
-        <div className={classNames('')}></div>
-        <div className={classNames('')}></div>
 
         </div>
         </div>

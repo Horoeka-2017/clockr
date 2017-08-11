@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Binary (props) {
-    return <p>{decimalToBinary(props.time)} </p>
+    return <span> {decimalToBinary(props.time)} </span>
 }
 
 function decimalToBinary (number) {
