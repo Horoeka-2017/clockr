@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
 import Binary from './Binary'
+import Divs from './Divs'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       secondsElapsed: 0,
-      classNameState: 0
+      classNameState: 0,
+
     };
   }
 
@@ -29,10 +31,12 @@ class App extends React.Component {
       <div >
         <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
         <div>Binary: {Binary(this.state.secondsElapsed)} </div>
-        <div className='color-container'>
-
+        <div className='container'>
+          {Binary(this.state.secondsElapsed).split('').map((arrV, i, arri) => {
+            return(<Divs arrV={arrV} i={i} arri={arri} />
+          )})}
         </div>
-        </div>
+      </div>
 
     );
   }
