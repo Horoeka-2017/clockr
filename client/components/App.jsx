@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Binary from './Binary'
 import Divs from './Divs'
+import hex from './hex'
 
 class App extends React.Component {
   constructor(props) {
@@ -31,10 +32,12 @@ class App extends React.Component {
       <div >
         <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
         <div>Binary: {Binary(this.state.secondsElapsed)} </div>
+        <div>Hex: {hex(this.state.secondsElapsed)} </div>
         <div className='container'>
           {Binary(this.state.secondsElapsed).split('').map((arrV, i, arri) => {
             return(<Divs arrV={arrV} i={i} arri={arri} />
           )})}
+
         </div>
       </div>
 
