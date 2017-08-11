@@ -29,7 +29,7 @@ class App extends React.Component {
       <div className={}>
         <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
         <div className='color-container'>
-        <div className={classNames('', {})}></div>
+        <div className={classNames('box', {})}></div>
         <div></div>
 
         </div>
