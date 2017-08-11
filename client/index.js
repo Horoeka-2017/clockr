@@ -5,7 +5,7 @@ import App from './components/App'
 
 function helloTemplate (props) {
   return (
-    <App />
+    <App/>
   )
 }
 
