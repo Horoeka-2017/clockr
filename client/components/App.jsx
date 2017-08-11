@@ -1,18 +1,30 @@
 import React, { Component } from 'react'
 
 
-class App extends Component { //Josh's Pull
-  constructor (props) {
-    super(props)
-    this.state = {}
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {secondsElapsed: 0};
   }
 
-  render () {
+  tick() {
+    this.setState((prevState) => ({
+      secondsElapsed: prevState.secondsElapsed + 1
+    }));
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
     return (
-      <div>
-        Hey Josh Put Me Here.... TANKS For Comming
-      </div>
-    )
+      <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+    );
   }
 }
 
