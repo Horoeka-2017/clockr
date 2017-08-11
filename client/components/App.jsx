@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Binary from './Binary'
 import Divs from './Divs'
+import NewLocation from './NewLocation'
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +10,6 @@ class App extends React.Component {
     this.state = {
       secondsElapsed: 0,
       classNameState: 0,
-
     };
   }
 
@@ -26,6 +26,7 @@ class App extends React.Component {
   componentWillUnmount() {
     clearInterval(this.interval);
   }
+
   render() {
     return (
       <div >
@@ -35,9 +36,8 @@ class App extends React.Component {
           {Binary(this.state.secondsElapsed).split('').map((arrV, i, arri) => {
             return(<Divs arrV={arrV} i={i} arri={arri} />
           )})}
-        </div>
+          </div>
       </div>
-
     );
   }
 }
