@@ -1,10 +1,6 @@
 import React from 'react'
 
-export default function Binary (props) {
-    return <p>{decimalToBinary(props.time)} </p>
-}
-
-function decimalToBinary (number) {
+export default function decimalToBinary (number) {
     const binaryNumber = []
     let x = number
     while (x > 0) {
