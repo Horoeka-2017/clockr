@@ -5,7 +5,6 @@ import App from './App'
 function helloTemplate(props) {
     return ( < App / > )
 }
-
 var data = { name: 'mix' }
 var view = helloTemplate(data)
 
