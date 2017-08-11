@@ -31,8 +31,8 @@ class App extends React.Component {
         <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
         <div>Binary: {Binary(this.state.secondsElapsed)} </div>
         <div className='color-container'>
-        <div></div>
-        <div></div>
+        <div className={classNames('')}></div>
+        <div className={classNames('')}></div>
 
         </div>
         </div>
