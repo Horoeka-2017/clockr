@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
+import Binary from './Binary'
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,13 +25,13 @@ class App extends React.Component {
   componentWillUnmount() {
     clearInterval(this.interval);
   }
-
   render() {
     return (
-      <div className={}>
+      <div >
         <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+        <div>Binary: {Binary(this.state.secondsElapsed)} </div>
         <div className='color-container'>
-        <div className={classNames('box', {})}></div>
+        <div></div>
         <div></div>
 
         </div>

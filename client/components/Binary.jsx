@@ -6,6 +6,7 @@ export default function Binary (props) {
 
 function decimalToBinary (number) {
     const binaryNumber = []
+    let x = number
     while (x > 0) {
         let remainder = x % 2
         x = Math.floor(x / 2)
