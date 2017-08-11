@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div >
         <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
-        <div>Binary: <Binary time = {this.state.secondsElapsed}/> </div>
+        <div>Binary: {Binary(this.state.secondsElapsed)} </div>
         <div className='color-container'>
 
         </div>
