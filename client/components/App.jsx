@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 
 import Binary from './Binary'
 import Divs from './Divs'
+<<<<<<< HEAD
 import hex from './hex'
+=======
+import NewLocation from './NewLocation'
+>>>>>>> fd8da31fcacde3ad4742b00ea7efbd168cd2e477
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +14,6 @@ class App extends React.Component {
     this.state = {
       secondsElapsed: 0,
       classNameState: 0,
-
     };
   }
 
@@ -27,6 +30,7 @@ class App extends React.Component {
   componentWillUnmount() {
     clearInterval(this.interval);
   }
+
   render() {
     return (
       <div >
@@ -40,7 +44,6 @@ class App extends React.Component {
 
         </div>
       </div>
-
     );
   }
 }
