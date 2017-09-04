@@ -1,18 +1,47 @@
 import React, { Component } from 'react'
 
+import Binary from './Binary'
+import Divs from './Divs'
+import hex from './hex'
 
-class App extends Component { //Josh's Pull
-  constructor (props) {
-    super(props)
-    this.state = {}
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      secondsElapsed: 0,
+      classNameState: 0,
+
+    };
   }
 
-  render () {
+  tick() {
+    this.setState((prevState) => ({
+      secondsElapsed: prevState.secondsElapsed + 1
+    }));
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  render() {
     return (
-      <div>
-        Hey Josh Put Me Here.... TANKS For Comming
+      <div >
+        <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+        <div>Binary: {Binary(this.state.secondsElapsed)} </div>
+        <div>Hex: {hex(this.state.secondsElapsed)} </div>
+        <div className='container'>
+          {Binary(this.state.secondsElapsed).split('').map((arrV, i, arri) => {
+            return(<Divs arrV={arrV} i={i} arri={arri} />
+          )})}
+
+        </div>
       </div>
-    )
+
+    );
   }
 }
 
